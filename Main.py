@@ -1,9 +1,10 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
+from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-browser = webdriver.Chrome("chromedriver.exe")
+browser: WebDriver = webdriver.Chrome("chromedriver.exe")
 
 # todo write you UserName and Password here don't forget to not let anyone see
 user = ""

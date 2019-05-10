@@ -1,8 +1,8 @@
 # Auto Eassess Ku
 
-This releases is for window only if you use another Os please read note below.
+This releases is for Window and Mac Os only if you use another Os please read note below.
 
-- [x] **TODO:** Don't forget to put your **Username** and **Password** on `Main.py` before running the program
+- [x] **TODO:** Don't forget to put your **Username** and **Password** on `main.py` before running the program
 
 Notes: 
 If you use linux or mac OS please remove 

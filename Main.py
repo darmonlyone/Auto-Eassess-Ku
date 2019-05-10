@@ -15,12 +15,12 @@ value = 5
 browser.get('https://eassess.ku.ac.th/')
 
 
-def let_pra_mearn(value):
+def let_pra_mearn(v):
     while True:
         try:
             pra_mern = browser.find_element_by_name("submit")
             pra_mern.send_keys(Keys.RETURN)
-            value_select = browser.find_elements_by_xpath("//input[@value='%d']" % value)
+            value_select = browser.find_elements_by_xpath("//input[@value='%d']" % v)
             for i in value_select:
                 i.click()
             submit = browser.find_element_by_name("OK")

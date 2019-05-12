@@ -61,3 +61,4 @@ for i in range(len(but)):
     time.sleep(1)
 
 browser.close()
+browser.__exit__()

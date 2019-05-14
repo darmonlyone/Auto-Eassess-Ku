@@ -56,7 +56,7 @@ for i in range(len(but)):
             try:
                 but[i].send_keys(Keys.RETURN)
             except StaleElementReferenceException:
-                print(i)
+                pass
     let_pra_mearn(value)
     time.sleep(1)
 

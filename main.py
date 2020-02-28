@@ -15,7 +15,10 @@ user = ""
 password = ""
 
 # todo change value at you want
-value = 5
+first_value = 1
+
+# todo change value at you want
+final_value = 5
 
 browser.get('https://eassess.ku.ac.th/')
 
@@ -27,7 +30,10 @@ def let_pra_mearn(v):
             pra_mern.send_keys(Keys.RETURN)
             value_select = browser.find_elements_by_xpath("//input[@value='%d']" % v)
             for i in value_select:
-                i.click()
+                try:
+                    i.click()
+                except Exception:
+                    break
             submit = browser.find_element_by_name("OK")
             submit.send_keys(Keys.RETURN)
         except NoSuchElementException:
@@ -46,6 +52,11 @@ submit_but[3].send_keys(Keys.RETURN)
 but = browser.find_elements_by_class_name("btn")
 
 for i in range(len(but)):
+    value = 0
+    if i == 0:
+        value = first_value
+    else:
+        value = final_value
     but = browser.find_elements_by_class_name("btn")
     try:
         but[i].click()

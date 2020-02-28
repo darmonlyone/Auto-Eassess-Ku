@@ -15,9 +15,14 @@ user = ""
 password = ""
 
 # todo change value at you want
+# Professor Vote
+# 1 Nice
+# 2 Any Suggestion
 first_value = 1
 
 # todo change value at you want
+# Vote yourself and your conductor
+# Range 5 good -> 1 Bad
 final_value = 5
 
 browser.get('https://eassess.ku.ac.th/')

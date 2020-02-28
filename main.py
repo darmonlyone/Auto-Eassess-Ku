@@ -2,12 +2,13 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
+import random
 import time
 
 # todo select you OS (commend device u didn't use)
 # Window
 browser: WebDriver = webdriver.Chrome("chromedriver.exe")
-# Mac OS
+# Mac OS or Other
 # browser: WebDriver = webdriver.Chrome("chromedriver")
 
 # todo write you UserName and Password here don't forget to not let anyone see
@@ -23,14 +24,19 @@ first_value = 1
 # todo change value at you want
 # Vote yourself and your conductor
 # Range 5 good -> 1 Bad
+# 0 fro random
 final_value = 5
 
-browser.get('https://eassess.ku.ac.th/')
+# random rage
+randomrange = [4, 5]
 
+browser.get('https://eassess.ku.ac.th/')
 
 def let_pra_mearn(v):
     while True:
         try:
+            if v == 0:
+                v = random.randrange(randomrange[0], randomrange[1] + 1)
             pra_mern = browser.find_element_by_name("submit")
             pra_mern.send_keys(Keys.RETURN)
             value_select = browser.find_elements_by_xpath("//input[@value='%d']" % v)
